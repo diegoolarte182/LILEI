@@ -1,5 +1,15 @@
 import React from 'react';
-import { IconArrowRight, IconBook, IconDownload } from './Icons';
+import { IconArrowRight, IconBook, IconDownload, IconHome, IconLink } from './Icons';
+
+const BackToHome = () => (
+    <button 
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="mt-6 flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-emerald-600 transition-colors"
+    >
+        <IconHome className="w-4 h-4" />
+        <span>Volver al Inicio</span>
+    </button>
+);
 
 export const CurriculumSection: React.FC = () => {
   return (
@@ -18,37 +28,16 @@ export const CurriculumSection: React.FC = () => {
                     <div className="p-8 md:p-12">
                          <div className="prose prose-lg text-slate-600 mb-8">
                             <p>
-                                La práctica pedagógica en el programa LILEI constituye un eje formativo fundamental que se desarrolla de manera progresiva y coherente. El estudiante avanza a través de diferentes fases que integran saberes disciplinarios con el entorno educativo.
+                                La práctica pedagógica en el programa de Licenciatura en Lenguas Extranjeras con Énfasis en Inglés constituye un eje formativo fundamental que se desarrolla de manera progresiva y coherente con las etapas del proceso educativo. En los primeros momentos, el estudiante participa en prácticas de observación participante, donde analiza contextos escolares, identifica dinámicas institucionales y reconoce procesos pedagógicos relacionados con la enseñanza del inglés.
                             </p>
                             <p>
-                                Todo este proceso, enmarcado en los principios del MHUS, busca formar docentes éticos, reflexivos y competentes, capaces de aportar a la transformación educativa y atender las demandas lingüísticas y socioculturales de los territorios.
+                                Posteriormente, avanza hacia prácticas de inmersión, en las cuales asume un rol más activo en la planeación, mediación y acompañamiento de actividades de aula, diseñando e implementando estrategias didácticas propias de la enseñanza del inglés como lengua extranjera.
+                            </p>
+                            <p>
+                                Finalmente, el programa incorpora prácticas pedagógicas orientadas a la investigación educativa. En esta fase, el futuro docente analiza problemáticas del aula, implementa intervenciones y sistematiza experiencias que fortalecen su pensamiento crítico y su formación profesional. Todo este proceso, enmarcado en los principios del MHUS, busca formar docentes éticos, reflexivos y competentes.
                             </p>
                          </div>
                          
-                         <div className="space-y-6">
-                            <div className="flex gap-4">
-                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">1</div>
-                                <div>
-                                    <h4 className="font-bold text-slate-900 text-lg">Observación Participante</h4>
-                                    <p className="text-slate-500">Análisis de contextos escolares, dinámicas institucionales y procesos pedagógicos.</p>
-                                </div>
-                            </div>
-                            <div className="flex gap-4">
-                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">2</div>
-                                <div>
-                                    <h4 className="font-bold text-slate-900 text-lg">Inmersión</h4>
-                                    <p className="text-slate-500">Rol activo en planeación, mediación y acompañamiento de actividades de aula y diseño de estrategias didácticas.</p>
-                                </div>
-                            </div>
-                            <div className="flex gap-4">
-                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">3</div>
-                                <div>
-                                    <h4 className="font-bold text-slate-900 text-lg">Investigación Educativa</h4>
-                                    <p className="text-slate-500">Desarrollo de proyectos que responden a necesidades reales, articulados con semilleros de investigación.</p>
-                                </div>
-                            </div>
-                         </div>
-
                          <div className="mt-10">
                              <a 
                                 href="https://academia.unad.edu.co/practica-educativa-y-pedagogica"
@@ -60,14 +49,22 @@ export const CurriculumSection: React.FC = () => {
                                 <IconArrowRight className="w-4 h-4" />
                              </a>
                          </div>
+                         <BackToHome />
                     </div>
                     <div className="bg-emerald-900 p-8 md:p-12 text-white flex flex-col justify-center">
-                        <div className="border border-emerald-700 rounded-xl p-6 bg-emerald-800/50 backdrop-blur-sm">
-                             <IconBook className="w-12 h-12 mb-4 text-emerald-400" />
-                             <h3 className="text-2xl font-bold mb-4">Componente Investigativo</h3>
-                             <p className="text-emerald-100 leading-relaxed">
-                                "En esta fase, el futuro docente analiza problemáticas del aula, implementa intervenciones y sistematiza experiencias que fortalecen su pensamiento crítico y su formación profesional."
-                             </p>
+                        <div className="space-y-6">
+                            <div className="border border-emerald-700 rounded-xl p-6 bg-emerald-800/50 backdrop-blur-sm">
+                                 <h4 className="text-xl font-bold mb-2 text-emerald-200">1. Observación Participante</h4>
+                                 <p className="text-emerald-100 text-sm">Análisis de contextos escolares y dinámicas institucionales.</p>
+                            </div>
+                            <div className="border border-emerald-700 rounded-xl p-6 bg-emerald-800/50 backdrop-blur-sm">
+                                 <h4 className="text-xl font-bold mb-2 text-emerald-200">2. Inmersión</h4>
+                                 <p className="text-emerald-100 text-sm">Rol activo en planeación y acompañamiento de actividades de aula.</p>
+                            </div>
+                            <div className="border border-emerald-700 rounded-xl p-6 bg-emerald-800/50 backdrop-blur-sm">
+                                 <h4 className="text-xl font-bold mb-2 text-emerald-200">3. Investigación Educativa</h4>
+                                 <p className="text-emerald-100 text-sm">Proyectos articulados con semilleros de investigación para atender necesidades reales.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -75,12 +72,17 @@ export const CurriculumSection: React.FC = () => {
         </div>
 
         {/* PLAN DE TRANSICIÓN */}
-        <div className="bg-amber-50 rounded-2xl p-8 border border-amber-100">
+        <div id="transition" className="bg-amber-50 rounded-2xl p-8 border border-amber-100 scroll-mt-32">
             <h3 className="text-2xl font-bold text-amber-900 mb-4">Plan de Transición y Equivalencias</h3>
-            <p className="text-slate-700 mb-6 max-w-4xl">
-                El plan de transición garantiza que los estudiantes del plan anterior (Resolución 09864 de 2018) puedan continuar su proceso formativo con normalidad frente a la actualización curricular. Se homologan cursos, se establecen equivalencias y se orienta el tránsito académico.
-            </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="prose prose-lg text-slate-700 mb-6 max-w-5xl">
+                <p className="mb-4">
+                    El plan de transición y equivalencias es el conjunto de acciones definidas por la UNAD para garantizar que los estudiantes matriculados en el plan de estudios anterior de la Licenciatura en Lenguas Extranjeras con Énfasis en Inglés (Resolución 09864 de 2018) puedan continuar su proceso formativo con normalidad frente a la actualización curricular del programa.
+                </p>
+                <p className="mb-4">
+                    El acuerdo determina que los estudiantes pueden acogerse voluntariamente al nuevo plan o, en algunos casos, deben hacerlo de manera obligatoria. Asimismo, establece que la oferta académica del plan antiguo continuará disponible de manera gradual durante un periodo máximo de dos años.
+                </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                 <a 
                     href="https://sgeneral.unad.edu.co/images/documentos/consejoAcademico/acuerdos/2024/COAC_ACUE_006_19042024.pdf" 
                     target="_blank" 
@@ -90,6 +92,7 @@ export const CurriculumSection: React.FC = () => {
                     <IconDownload className="w-4 h-4" />
                     <span>Descargar Acuerdo 006 de 2024</span>
                 </a>
+                <BackToHome />
             </div>
         </div>
 

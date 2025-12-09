@@ -1,5 +1,15 @@
 import React from 'react';
-import { IconCheckCircle, IconFileText, IconArrowRight, IconMail, IconLink, IconUsers } from './Icons';
+import { IconCheckCircle, IconFileText, IconArrowRight, IconMail, IconLink, IconUsers, IconHome, IconDownload } from './Icons';
+
+const BackToHome = () => (
+    <button 
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="mt-6 flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-amber-600 transition-colors"
+    >
+        <IconHome className="w-4 h-4" />
+        <span>Volver al Inicio</span>
+    </button>
+);
 
 export const ProcessesSection: React.FC = () => {
   return (
@@ -17,11 +27,14 @@ export const ProcessesSection: React.FC = () => {
 
         <div className="bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden">
             <div className="p-8 md:p-10 bg-slate-50 border-b border-slate-200">
-                <p className="text-lg text-slate-700 leading-relaxed max-w-4xl mx-auto text-center">
-                    La homologación de los cursos de Inglés se realiza exclusivamente mediante certificación de nivel de lengua obtenida en un examen estandarizado reconocido internacionalmente y aceptado por la UNAD. El certificado debe evaluar las cuatro habilidades (Listening, Speaking, Reading y Writing) y tener una vigencia no mayor a dos años.
+                <p className="text-lg text-slate-700 leading-relaxed max-w-4xl mx-auto text-center mb-6">
+                    La homologación de los cursos de Inglés del programa se realiza exclusivamente mediante certificación de nivel de lengua obtenida en un examen estandarizado reconocido internacionalmente y aceptado por la UNAD, siempre que dicho certificado evalúe las cuatro habilidades (Listening, Speaking, Reading y Writing) y tenga una vigencia no mayor a dos años.
                 </p>
-                <div className="flex justify-center mt-6">
-                    <span className="font-semibold text-amber-700 bg-amber-100 px-4 py-2 rounded-lg">Acuerdo 421 de 2025</span>
+                <div className="flex justify-center gap-4 flex-wrap">
+                    <button className="inline-flex items-center gap-2 bg-amber-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-amber-700 transition-colors">
+                        <IconDownload className="w-4 h-4" />
+                        <span>Descargar Acuerdo 421 de 2025</span>
+                    </button>
                 </div>
             </div>
             
@@ -59,11 +72,12 @@ export const ProcessesSection: React.FC = () => {
                         </tbody>
                     </table>
                 </div>
-                <div className="mt-8 text-center">
-                    <button className="text-amber-600 font-bold hover:text-amber-800 transition-colors flex items-center justify-center gap-2 mx-auto">
+                <div className="mt-8 text-center flex flex-col items-center gap-4">
+                     <button className="text-amber-600 font-bold hover:text-amber-800 transition-colors flex items-center justify-center gap-2">
                         <IconFileText className="w-4 h-4" />
                         <span>Ver Guía Solicitud de Homologación</span>
                     </button>
+                    <BackToHome />
                 </div>
             </div>
         </div>
@@ -74,25 +88,30 @@ export const ProcessesSection: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-grow">
                   <h3 className="text-2xl font-bold mb-4">Proceso de Matrícula</h3>
-                  <p className="mb-6 opacity-90">
-                      Registro, selección de cursos y pago. Para evitar retrasos, tenga listos sus documentos soporte y verifique la información. Una vez matriculado, legalice su matrícula en el CEAD y asista a la inducción.
+                  <p className="mb-4 opacity-90">
+                      Para realizar la matrícula en la UNAD, primero debes completar el registro en el formulario de inscripción, diligenciar tus datos personales y cargar los documentos solicitados. Una vez hecho el registro, ingresa al enlace de Inscripción y Matrícula, selecciona el programa académico y los cursos del primer periodo, y descarga tu recibo de pago.
                   </p>
-                  <a 
-                    href="https://estudios.unad.edu.co/inscripciones-y-matriculas" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors"
-                  >
-                      <span>Inscripciones y Matrículas</span>
-                      <IconArrowRight className="w-4 h-4" />
-                  </a>
-              </div>
-              <div className="hidden md:block w-px h-32 bg-white/20"></div>
-              <div className="md:w-1/3 text-sm opacity-80 space-y-2">
-                  <div className="flex items-center gap-2"><IconCheckCircle className="w-4 h-4"/> <span>Registro de datos</span></div>
-                  <div className="flex items-center gap-2"><IconCheckCircle className="w-4 h-4"/> <span>Cargue de documentos</span></div>
-                  <div className="flex items-center gap-2"><IconCheckCircle className="w-4 h-4"/> <span>Generación de recibo</span></div>
-                  <div className="flex items-center gap-2"><IconCheckCircle className="w-4 h-4"/> <span>Legalización y Acta</span></div>
+                  <p className="mb-6 opacity-90 text-sm">
+                      Para evitar retrasos, tenga listos sus documentos soporte, verifique la exactitud de la información registrada, realice el pago dentro de las fechas establecidas y genere oportunamente su acta de matrícula.
+                  </p>
+                  <div className="flex flex-wrap items-center gap-4">
+                      <a 
+                        href="https://estudios.unad.edu.co/inscripciones-y-matriculas" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors"
+                      >
+                          <span>Inscripciones y Matrículas</span>
+                          <IconArrowRight className="w-4 h-4" />
+                      </a>
+                      <button 
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className="flex items-center gap-2 text-sm font-medium text-blue-200 hover:text-white transition-colors"
+                    >
+                        <IconHome className="w-4 h-4" />
+                        <span>Volver al Inicio</span>
+                    </button>
+                  </div>
               </div>
           </div>
       </div>
@@ -102,32 +121,35 @@ export const ProcessesSection: React.FC = () => {
         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 text-center">Opciones de Grado</h2>
         <div className="grid md:grid-cols-2 gap-12">
             <div>
-                <p className="text-slate-600 mb-6 text-lg">
-                    Las opciones de trabajo de grado en la UNAD son alternativas académicas que permiten al estudiante integrar y aplicar conocimientos. Para obtener el título, debe aprobar una de estas opciones:
+                <p className="text-slate-600 mb-4 text-lg">
+                    Las opciones de trabajo de grado en la UNAD son alternativas académicas que permiten al estudiante integrar, profundizar y aplicar los conocimientos adquiridos durante su proceso formativo. Para obtener el título profesional, el estudiante debe aprobar una de estas opciones.
                 </p>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-6">
                     <li className="flex items-center gap-3 bg-purple-50 p-3 rounded-lg text-purple-900 font-medium">
                         <div className="w-2 h-2 rounded-full bg-purple-500"></div> Diplomado de Profundización
                     </li>
                     <li className="flex items-center gap-3 bg-purple-50 p-3 rounded-lg text-purple-900 font-medium">
-                        <div className="w-2 h-2 rounded-full bg-purple-500"></div> Créditos de Posgrado (Especialización/Maestría)
+                        <div className="w-2 h-2 rounded-full bg-purple-500"></div> Créditos de Especialización o Maestría
                     </li>
                     <li className="flex items-center gap-3 bg-purple-50 p-3 rounded-lg text-purple-900 font-medium">
-                        <div className="w-2 h-2 rounded-full bg-purple-500"></div> Proyecto Aplicado / Monografía
-                    </li>
-                    <li className="flex items-center gap-3 bg-purple-50 p-3 rounded-lg text-purple-900 font-medium">
-                        <div className="w-2 h-2 rounded-full bg-purple-500"></div> Proyecto de Investigación
+                        <div className="w-2 h-2 rounded-full bg-purple-500"></div> Trabajo de Grado Investigativo
                     </li>
                 </ul>
+                <p className="text-sm text-slate-500 mb-6">
+                    El estudiante puede iniciar su opción de grado cuando cumpla con los requisitos establecidos, pero una vez finalizado el plan de estudios, dispone de doce meses para desarrollar la opción elegida.
+                </p>
                 <a 
                     href="https://estudios.unad.edu.co/opcion-de-grado-profesional"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-purple-600 font-bold hover:text-purple-800 inline-flex items-center gap-2"
+                    className="text-purple-600 font-bold hover:text-purple-800 inline-flex items-center gap-2 mb-4"
                 >
                     <span>Ver Información Oficial</span>
                     <IconLink className="w-4 h-4" />
                 </a>
+                <div className="block">
+                     <BackToHome />
+                </div>
             </div>
             
             <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
@@ -166,24 +188,28 @@ export const ProcessesSection: React.FC = () => {
                   </div>
               </div>
               <div className="md:w-2/3">
-                  <h2 className="text-3xl font-bold text-slate-900 mb-4">Acompañamiento Docente</h2>
+                  <h2 className="text-3xl font-bold text-slate-900 mb-4">Acompañamiento</h2>
                   <div className="space-y-6 text-slate-600">
                       <p>
-                          El acompañamiento en LILEI es integral. Las <strong>CIPAS PM</strong> (Comunidad de Interacción y Participación Académica y Social) ofrecen orientación permanente a estudiantes de primera matrícula.
+                          El acompañamiento docente en el programa de Licenciatura en Lenguas Extranjeras con Énfasis en Inglés se estructura a partir de diversas mediaciones que fortalecen la formación lingüística y pedagógica del estudiante.
                       </p>
                       <p>
-                          La <strong>Comunidad Virtual de Lengua</strong> ofrece un entorno especializado para la práctica del inglés.
+                          Las <strong>CIPAS PM</strong> (Comunidad de Interacción y Participación Académica y Social) constituyen un espacio clave donde los estudiantes de primera matrícula encuentran orientación, acompañamiento permanente y apoyo académico y socioemocional.
+                      </p>
+                      <p>
+                          A la par, la <strong>Comunidad Virtual de Lengua</strong> ofrece un entorno especializado para la práctica continua del inglés.
                       </p>
                       <div className="grid sm:grid-cols-2 gap-4">
                           <div className="bg-teal-50 p-4 rounded-xl">
-                              <h5 className="font-bold text-teal-800 mb-1">Sincrónico</h5>
+                              <h5 className="font-bold text-teal-800 mb-1">Estrategias Sincrónicas</h5>
                               <p className="text-sm">Conferencias, tutorías en vivo, sesiones de práctica oral y talleres.</p>
                           </div>
                           <div className="bg-teal-50 p-4 rounded-xl">
-                              <h5 className="font-bold text-teal-800 mb-1">Asincrónico</h5>
-                              <p className="text-sm">Retroalimentación personalizada, foros y materiales de consulta.</p>
+                              <h5 className="font-bold text-teal-800 mb-1">Estrategias Asincrónicas</h5>
+                              <p className="text-sm">Retroalimentaciones personalizadas, foros académicos y actividades guiadas.</p>
                           </div>
                       </div>
+                      <BackToHome />
                   </div>
               </div>
           </div>

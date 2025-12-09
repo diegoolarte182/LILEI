@@ -1,5 +1,15 @@
 import React from 'react';
-import { IconGlobe, IconLaptop, IconCheckCircle, IconArrowRight, IconLink } from './Icons';
+import { IconGlobe, IconLaptop, IconCheckCircle, IconArrowRight, IconLink, IconHome } from './Icons';
+
+const BackToHome = () => (
+    <button 
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="mt-6 flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-indigo-600 transition-colors"
+    >
+        <IconHome className="w-4 h-4" />
+        <span>Volver al Inicio</span>
+    </button>
+);
 
 export const FocusSection: React.FC = () => {
   return (
@@ -14,16 +24,13 @@ export const FocusSection: React.FC = () => {
                     <span>LILEI</span>
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                    Información General del Programa
+                    Información General
                 </h2>
                 <div className="prose prose-lg text-slate-600">
                     <p className="mb-4">
-                        El programa de Licenciatura en Lenguas Extranjeras con Énfasis en Inglés (LiLEI) de la UNAD es una propuesta académica innovadora diseñada para formar profesionales competentes en la enseñanza del inglés, con un enfoque crítico, intercultural e inclusivo.
+                        El programa de Licenciatura en Lenguas Extranjeras con Énfasis en Inglés (LiLEI) de la UNAD es una propuesta académica innovadora diseñada para formar profesionales competentes en la enseñanza del inglés, con un enfoque crítico, intercultural e inclusivo. A través de una modalidad 100% virtual, el programa promueve la flexibilidad académica, permitiendo a los estudiantes adaptar su proceso de aprendizaje a sus necesidades personales y laborales.
                     </p>
                     <p className="mb-4">
-                         A través de una modalidad 100% virtual, el programa promueve la flexibilidad académica, permitiendo a los estudiantes adaptar su proceso de aprendizaje a sus necesidades personales y laborales.
-                    </p>
-                    <p>
                         La formación en LiLEI integra competencias pedagógicas, lingüísticas y tecnológicas, preparando docentes capaces de diseñar estrategias didácticas innovadoras para contextos diversos, con énfasis en el uso de herramientas digitales. Además, el programa fomenta la investigación en el campo de la enseñanza de lenguas extranjeras, alineado con los estándares internacionales (MCER) y las demandas educativas actuales.
                     </p>
                 </div>
@@ -39,6 +46,7 @@ export const FocusSection: React.FC = () => {
                         <IconLink className="w-4 h-4" />
                     </a>
                 </div>
+                <BackToHome />
             </div>
             
             <div className="lg:w-1/2 w-full">
@@ -56,15 +64,15 @@ export const FocusSection: React.FC = () => {
                         <div className="flex items-center gap-4 border-b border-indigo-700 pb-4">
                             <div className="bg-indigo-800 p-3 rounded-lg"><IconGlobe className="w-6 h-6"/></div>
                             <div>
-                                <span className="block text-indigo-300 text-sm">Registro Calificado</span>
-                                <span className="font-semibold text-lg">Resolución Vigente</span>
+                                <span className="block text-indigo-300 text-sm">Investigación</span>
+                                <span className="font-semibold text-lg">Semilleros Activos</span>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
                             <div className="bg-indigo-800 p-3 rounded-lg"><IconCheckCircle className="w-6 h-6"/></div>
                             <div>
-                                <span className="block text-indigo-300 text-sm">Créditos</span>
-                                <span className="font-semibold text-lg">160 Créditos Académicos</span>
+                                <span className="block text-indigo-300 text-sm">Enfoque</span>
+                                <span className="font-semibold text-lg">Intercultural e Inclusivo</span>
                             </div>
                         </div>
                      </div>
@@ -82,19 +90,19 @@ export const FocusSection: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
                         <h4 className="font-bold text-blue-800 mb-2">CLIL & TBL</h4>
-                        <p className="text-sm text-blue-700">Aprendizaje Integrado de Contenidos y Lenguas + Aprendizaje Basado en Tareas.</p>
+                        <p className="text-sm text-blue-700">Integración de contenidos, lenguas y aprendizaje basado en tareas.</p>
                     </div>
                     <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100">
                          <h4 className="font-bold text-amber-800 mb-2">Didáctica</h4>
-                        <p className="text-sm text-amber-700">Diseño de materiales, evaluación de competencias y gestión de entornos virtuales.</p>
+                        <p className="text-sm text-amber-700">Diseño de materiales, evaluación y gestión de entornos virtuales.</p>
                     </div>
                     <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
-                         <h4 className="font-bold text-emerald-800 mb-2">Investigación</h4>
-                        <p className="text-sm text-emerald-700">Lingüística Aplicada y Pedagogía alineada al contexto educativo.</p>
+                         <h4 className="font-bold text-emerald-800 mb-2">Competencias</h4>
+                        <p className="text-sm text-emerald-700">Formación pedagógica, lingüística y tecnológica.</p>
                     </div>
                     <div className="bg-purple-50 p-6 rounded-2xl border border-purple-100">
-                         <h4 className="font-bold text-purple-800 mb-2">Tecnología</h4>
-                        <p className="text-sm text-purple-700">Uso de Moodle, simuladores pedagógicos y recursos multimedia.</p>
+                         <h4 className="font-bold text-purple-800 mb-2">Herramientas</h4>
+                        <p className="text-sm text-purple-700">Uso de Moodle, simuladores y recursos multimedia.</p>
                     </div>
                 </div>
             </div>
@@ -115,7 +123,7 @@ export const FocusSection: React.FC = () => {
                         Además, prepara a los estudiantes para diseñar materiales didácticos, evaluar competencias lingüísticas y gestionar entornos virtuales de aprendizaje, siempre con un enfoque inclusivo e intercultural.
                     </p>
                     <p className="mb-4">
-                        Con un modelo 100% virtual, el programa enfatiza el uso de herramientas digitales para la enseñanza del inglés. Los graduados desarrollan habilidades para adaptarse a diversos contextos educativos, fomentando un aprendizaje autónomo y colaborativo. La formación incluye un componente de práctica pedagógica educativa y está alineada con los estándares del <strong>MCER</strong> y las políticas del Ministerio de Educación Nacional.
+                        Con un modelo 100% virtual, el programa enfatiza el uso de herramientas digitales (Moodle, simuladores pedagógicos y recursos multimedia) para la enseñanza del inglés. Los graduados desarrollan habilidades para adaptarse a diversos contextos educativos, fomentando un aprendizaje autónomo y colaborativo. La formación incluye un componente de práctica pedagógica educativa y está alineada con los estándares del Marco Común Europeo de Referencia (MCER) y las políticas del Ministerio de Educación Nacional.
                     </p>
                 </div>
                  <div className="mt-8">
@@ -129,6 +137,7 @@ export const FocusSection: React.FC = () => {
                         <IconArrowRight className="w-4 h-4" />
                     </a>
                 </div>
+                <BackToHome />
             </div>
         </div>
       </div>

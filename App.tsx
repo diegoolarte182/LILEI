@@ -20,7 +20,8 @@ function App() {
       { label: 'Programa', id: 'general-info' },
       { label: 'Práctica', id: 'practice' },
       { label: 'Homologación', id: 'homologation' },
-      { label: 'Grado', id: 'degree' }
+      { label: 'Grado', id: 'degree' },
+      { label: 'Soporte', id: 'support' }
   ];
 
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconGlobe, IconLaptop, IconUsers, IconBook, IconGraduation, IconFileText, IconArrowRight, IconCheckCircle } from './Icons';
+import { IconGlobe, IconLaptop, IconUsers, IconBook, IconGraduation, IconCheckCircle, IconArrowRight } from './Icons';
 
 interface HeroButtonProps {
   label: string;
@@ -44,7 +44,7 @@ const HeroButton: React.FC<HeroButtonProps> = ({ label, icon, colorClass, target
 
 export const HeroSection: React.FC = () => {
   return (
-    <header className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-slate-900 pt-24 pb-20">
+    <header id="top" className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-slate-900 pt-24 pb-20">
       
       {/* Background Effects */}
       <div className="absolute inset-0 z-0">
@@ -69,7 +69,7 @@ export const HeroSection: React.FC = () => {
           </p>
         </div>
 
-        {/* The 6 Main Buttons Grid - Updated per request */}
+        {/* The 6 Main Buttons Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
           <HeroButton 
             label="Información General" 
