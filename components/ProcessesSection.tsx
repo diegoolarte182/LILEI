@@ -35,6 +35,10 @@ export const ProcessesSection: React.FC = () => {
                         <IconDownload className="w-4 h-4" />
                         <span>Descargar Acuerdo 421 de 2025</span>
                     </button>
+                     <button className="inline-flex items-center gap-2 bg-slate-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-slate-800 transition-colors">
+                        <IconFileText className="w-4 h-4" />
+                        <span>Ver Guía Solicitud de Homologación</span>
+                    </button>
                 </div>
             </div>
             
@@ -73,10 +77,6 @@ export const ProcessesSection: React.FC = () => {
                     </table>
                 </div>
                 <div className="mt-8 text-center flex flex-col items-center gap-4">
-                     <button className="text-amber-600 font-bold hover:text-amber-800 transition-colors flex items-center justify-center gap-2">
-                        <IconFileText className="w-4 h-4" />
-                        <span>Ver Guía Solicitud de Homologación</span>
-                    </button>
                     <BackToHome />
                 </div>
             </div>
@@ -84,29 +84,29 @@ export const ProcessesSection: React.FC = () => {
       </div>
 
       {/* MATRICULA */}
-      <div id="registration" className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl p-8 md:p-12 text-white">
+      <div id="registration" className="scroll-mt-32 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl p-8 md:p-12 text-white shadow-xl">
           <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-grow">
                   <h3 className="text-2xl font-bold mb-4">Proceso de Matrícula</h3>
-                  <p className="mb-4 opacity-90">
-                      Para realizar la matrícula en la UNAD, primero debes completar el registro en el formulario de inscripción, diligenciar tus datos personales y cargar los documentos solicitados. Una vez hecho el registro, ingresa al enlace de Inscripción y Matrícula, selecciona el programa académico y los cursos del primer periodo, y descarga tu recibo de pago.
+                  <p className="mb-4 opacity-90 leading-relaxed">
+                      Para realizar la matrícula en la UNAD, primero debes completar el registro en el formulario de inscripción, diligenciar tus datos personales y cargar los documentos solicitados. Una vez hecho el registro, ingresa al enlace de Inscripción y Matrícula, selecciona el programa académico y los cursos del primer periodo, y descarga tu recibo de pago, el cual debes cancelar dentro de las fechas establecidas.
                   </p>
-                  <p className="mb-6 opacity-90 text-sm">
-                      Para evitar retrasos, tenga listos sus documentos soporte, verifique la exactitud de la información registrada, realice el pago dentro de las fechas establecidas y genere oportunamente su acta de matrícula.
+                  <p className="mb-6 opacity-90 text-sm font-light bg-blue-800/30 p-4 rounded-lg">
+                      <strong>Nota:</strong> Para evitar retrasos, tenga listos sus documentos soporte, verifique la exactitud de la información registrada, realice el pago dentro de las fechas establecidas y genere oportunamente su acta de matrícula. Finalmente, legalice su matrícula en el CEAD y asista a la inducción para iniciar adecuadamente su proceso académico.
                   </p>
                   <div className="flex flex-wrap items-center gap-4">
                       <a 
                         href="https://estudios.unad.edu.co/inscripciones-y-matriculas" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors"
+                        className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors shadow-lg"
                       >
                           <span>Inscripciones y Matrículas</span>
                           <IconArrowRight className="w-4 h-4" />
                       </a>
                       <button 
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="flex items-center gap-2 text-sm font-medium text-blue-200 hover:text-white transition-colors"
+                        className="flex items-center gap-2 text-sm font-medium text-blue-200 hover:text-white transition-colors ml-4"
                     >
                         <IconHome className="w-4 h-4" />
                         <span>Volver al Inicio</span>
@@ -122,7 +122,7 @@ export const ProcessesSection: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12">
             <div>
                 <p className="text-slate-600 mb-4 text-lg">
-                    Las opciones de trabajo de grado en la UNAD son alternativas académicas que permiten al estudiante integrar, profundizar y aplicar los conocimientos adquiridos durante su proceso formativo. Para obtener el título profesional, el estudiante debe aprobar una de estas opciones.
+                    Las opciones de trabajo de grado en la UNAD son alternativas académicas que permiten al estudiante integrar, profundizar y aplicar los conocimientos adquiridos durante su proceso formativo, tal como lo establece el Reglamento Estudiantil. Para obtener el título profesional, el estudiante debe aprobar una de estas opciones, las cuales pueden incluir diplomado de profundización, créditos de especialización o maestría, o trabajo de grado investigativo (monografía, proyecto de investigación o proyecto aplicado).
                 </p>
                 <ul className="space-y-3 mb-6">
                     <li className="flex items-center gap-3 bg-purple-50 p-3 rounded-lg text-purple-900 font-medium">
@@ -135,8 +135,8 @@ export const ProcessesSection: React.FC = () => {
                         <div className="w-2 h-2 rounded-full bg-purple-500"></div> Trabajo de Grado Investigativo
                     </li>
                 </ul>
-                <p className="text-sm text-slate-500 mb-6">
-                    El estudiante puede iniciar su opción de grado cuando cumpla con los requisitos establecidos, pero una vez finalizado el plan de estudios, dispone de doce meses para desarrollar la opción elegida.
+                <p className="text-sm text-slate-500 mb-6 leading-relaxed">
+                    El estudiante puede iniciar su opción de grado cuando cumpla con los requisitos establecidos, pero una vez finalizado el plan de estudios, dispone de doce meses para desarrollar la opción elegida, pagando los derechos pecuniarios correspondientes cuando aplica, y manteniendo vigente el seguro estudiantil. Todas las notificaciones se realizarán a través del correo institucional, por lo que es indispensable revisarlo constantemente. Si el estudiante pertenece a un semillero, deberá postular su propuesta de trabajo de grado por el módulo correspondiente. Para resolver inquietudes adicionales sobre cronogramas o procedimientos, puede contactar al líder de escuela en su zona.
                 </p>
                 <a 
                     href="https://estudios.unad.edu.co/opcion-de-grado-profesional"
@@ -152,7 +152,7 @@ export const ProcessesSection: React.FC = () => {
                 </div>
             </div>
             
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm">
                 <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
                     <IconMail className="w-5 h-5 text-slate-500" />
                     Contacto Líderes Zonales
@@ -168,9 +168,9 @@ export const ProcessesSection: React.FC = () => {
                         { zone: 'CARIBE', email: 'ecedu.zcar@unad.edu.co' },
                         { zone: 'BOYACÁ', email: 'ecedu.zcboy@unad.edu.co' },
                     ].map((item) => (
-                        <div key={item.zone} className="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white p-3 rounded border border-slate-100">
-                            <span className="font-semibold text-xs text-slate-500">{item.zone}</span>
-                            <a href={`mailto:${item.email}`} className="text-blue-600 hover:underline break-all">{item.email}</a>
+                        <div key={item.zone} className="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white p-3 rounded border border-slate-100 hover:border-purple-200 transition-colors">
+                            <span className="font-semibold text-xs text-slate-500 mb-1 sm:mb-0">{item.zone}</span>
+                            <a href={`mailto:${item.email}`} className="text-blue-600 hover:underline break-all font-mono text-xs">{item.email}</a>
                         </div>
                     ))}
                 </div>
@@ -180,35 +180,38 @@ export const ProcessesSection: React.FC = () => {
 
       {/* 6. ACOMPAÑAMIENTO */}
       <div id="support" className="scroll-mt-32 border-t pt-16 border-slate-200">
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-1/3 flex justify-center">
-                  <div className="w-48 h-48 bg-teal-100 rounded-full flex items-center justify-center relative">
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="md:w-1/3 flex justify-center md:justify-start">
+                  <div className="w-48 h-48 bg-teal-100 rounded-full flex items-center justify-center relative flex-shrink-0">
                       <div className="absolute inset-0 border-4 border-teal-200 rounded-full animate-pulse"></div>
                       <IconUsers className="w-24 h-24 text-teal-600" />
                   </div>
               </div>
               <div className="md:w-2/3">
-                  <h2 className="text-3xl font-bold text-slate-900 mb-4">Acompañamiento</h2>
-                  <div className="space-y-6 text-slate-600">
+                  <h2 className="text-3xl font-bold text-slate-900 mb-4">Acompañamiento Docente</h2>
+                  <div className="space-y-6 text-slate-600 prose prose-lg">
                       <p>
                           El acompañamiento docente en el programa de Licenciatura en Lenguas Extranjeras con Énfasis en Inglés se estructura a partir de diversas mediaciones que fortalecen la formación lingüística y pedagógica del estudiante.
                       </p>
                       <p>
-                          Las <strong>CIPAS PM</strong> (Comunidad de Interacción y Participación Académica y Social) constituyen un espacio clave donde los estudiantes de primera matrícula encuentran orientación, acompañamiento permanente y apoyo académico y socioemocional.
+                          Las <strong>CIPAS PM</strong> (Comunidad de Interacción y Participación Académica y Social) constituyen un espacio clave donde los estudiantes de primera matrícula encuentran orientación, acompañamiento permanente y apoyo académico y socioemocional. Allí se promueve la integración a la vida universitaria, el reconocimiento de rutas de aprendizaje, la participación en actividades colaborativas y el fortalecimiento de habilidades para la permanencia y el éxito académico.
                       </p>
                       <p>
-                          A la par, la <strong>Comunidad Virtual de Lengua</strong> ofrece un entorno especializado para la práctica continua del inglés.
+                          A la par, las <strong>Comunidades Virtuales de Lengua</strong> ofrecen un entorno especializado para la práctica continua del inglés, con recursos didácticos, actividades de interacción, talleres y espacios de participación que complementan el desarrollo de competencias comunicativas. Este espacio permite profundizar en el uso real de la lengua y promover el aprendizaje autónomo mediado por prácticas colaborativas entre docentes y estudiantes.
                       </p>
-                      <div className="grid sm:grid-cols-2 gap-4">
-                          <div className="bg-teal-50 p-4 rounded-xl">
-                              <h5 className="font-bold text-teal-800 mb-1">Estrategias Sincrónicas</h5>
-                              <p className="text-sm">Conferencias, tutorías en vivo, sesiones de práctica oral y talleres.</p>
+                      <div className="grid sm:grid-cols-2 gap-4 my-6 not-prose">
+                          <div className="bg-teal-50 p-5 rounded-xl border border-teal-100">
+                              <h5 className="font-bold text-teal-800 mb-2">Estrategias Sincrónicas</h5>
+                              <p className="text-sm">Conferencias, tutorías en vivo, sesiones de práctica oral y talleres que facilitan la interacción directa y el diálogo formativo.</p>
                           </div>
-                          <div className="bg-teal-50 p-4 rounded-xl">
-                              <h5 className="font-bold text-teal-800 mb-1">Estrategias Asincrónicas</h5>
-                              <p className="text-sm">Retroalimentaciones personalizadas, foros académicos y actividades guiadas.</p>
+                          <div className="bg-teal-50 p-5 rounded-xl border border-teal-100">
+                              <h5 className="font-bold text-teal-800 mb-2">Estrategias Asincrónicas</h5>
+                              <p className="text-sm">Retroalimentaciones personalizadas, foros académicos, materiales de consulta y actividades guiadas para avanzar a ritmo propio.</p>
                           </div>
                       </div>
+                      <p className="italic text-slate-500 border-l-4 border-teal-400 pl-4">
+                          En conjunto, estos componentes articulan un acompañamiento integral, flexible y reticular, coherente con el modelo pedagógico unadista y orientado a fortalecer el desarrollo profesional, lingüístico y humano de los futuros licenciados en lenguas extranjeras.
+                      </p>
                       <BackToHome />
                   </div>
               </div>

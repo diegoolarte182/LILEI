@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconGlobe, IconLaptop, IconUsers, IconBook, IconGraduation, IconCheckCircle, IconArrowRight } from './Icons';
+import { IconGlobe, IconLaptop, IconUsers, IconBook, IconGraduation, IconCheckCircle, IconArrowRight, IconFileText, IconDownload } from './Icons';
 
 interface HeroButtonProps {
   label: string;
@@ -54,7 +54,7 @@ export const HeroSection: React.FC = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-8">
-        <div className="text-center mb-16 max-w-4xl mx-auto">
+        <div className="text-center mb-12 max-w-4xl mx-auto">
           <div className="inline-block px-4 py-1.5 rounded-full bg-blue-900/50 border border-blue-700 text-blue-300 text-sm font-semibold mb-6 tracking-wide">
             PROGRAMA ACADÉMICO UNAD
           </div>
@@ -69,8 +69,8 @@ export const HeroSection: React.FC = () => {
           </p>
         </div>
 
-        {/* The 6 Main Buttons Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+        {/* The 8 Main Buttons Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
           <HeroButton 
             label="Información General" 
             icon={<IconGlobe />} 
@@ -96,7 +96,19 @@ export const HeroSection: React.FC = () => {
             targetId="homologation"
           />
           <HeroButton 
-            label="Proceso de Grado" 
+            label="Matrícula" 
+            icon={<IconFileText />} 
+            colorClass="bg-gradient-to-br from-cyan-600 to-cyan-800"
+            targetId="registration"
+          />
+          <HeroButton 
+            label="Plan de Transición" 
+            icon={<IconDownload />} 
+            colorClass="bg-gradient-to-br from-orange-600 to-orange-800"
+            targetId="transition"
+          />
+          <HeroButton 
+            label="Opciones de Grado" 
             icon={<IconGraduation />} 
             colorClass="bg-gradient-to-br from-purple-600 to-purple-800"
             targetId="degree"
@@ -111,7 +123,7 @@ export const HeroSection: React.FC = () => {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-500">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-500 hidden md:block">
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>

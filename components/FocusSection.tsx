@@ -123,7 +123,7 @@ export const FocusSection: React.FC = () => {
                         Además, prepara a los estudiantes para diseñar materiales didácticos, evaluar competencias lingüísticas y gestionar entornos virtuales de aprendizaje, siempre con un enfoque inclusivo e intercultural.
                     </p>
                     <p className="mb-4">
-                        Con un modelo 100% virtual, el programa enfatiza el uso de herramientas digitales (Moodle, simuladores pedagógicos y recursos multimedia) para la enseñanza del inglés. Los graduados desarrollan habilidades para adaptarse a diversos contextos educativos, fomentando un aprendizaje autónomo y colaborativo. La formación incluye un componente de práctica pedagógica educativa y está alineada con los estándares del Marco Común Europeo de Referencia (MCER) y las políticas del Ministerio de Educación Nacional.
+                        Con un modelo 100% virtual, el programa enfatiza el uso de herramientas digitales (Moodle, simuladores pedagógicos y recursos multimedia) para la enseñanza del inglés. Los graduados desarrollan habilidades para adaptarse a diversos contextos educativos, fomentando un aprendizaje autónomo y colaborativo. La formación incluye un componente de práctica pedagógica educativa y está alineada con los estándares del Marco Común Europeo de Referencia (MCER) y las políticas del Ministerio de Educación Nacional, asegurando una educación de calidad y pertinencia social.
                     </p>
                 </div>
                  <div className="mt-8">

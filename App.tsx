@@ -20,6 +20,8 @@ function App() {
       { label: 'Programa', id: 'general-info' },
       { label: 'Práctica', id: 'practice' },
       { label: 'Homologación', id: 'homologation' },
+      { label: 'Matrícula', id: 'registration' },
+      { label: 'Transición', id: 'transition' },
       { label: 'Grado', id: 'degree' },
       { label: 'Soporte', id: 'support' }
   ];
@@ -39,7 +41,7 @@ function App() {
               UNAD <span className="font-light opacity-80">| LILEI</span>
             </span>
           </div>
-          <div className="hidden md:flex gap-6 lg:gap-8 text-sm font-medium">
+          <div className="hidden lg:flex gap-4 xl:gap-6 text-sm font-medium">
              {navItems.map((item) => (
                 <button 
                     key={item.label}
@@ -61,6 +63,10 @@ function App() {
                 </button>
              ))}
           </div>
+          {/* Mobile Menu Button Placeholder (Optional) */}
+           <button className="lg:hidden text-white" onClick={() => window.scrollTo({ top: 500, behavior: 'smooth' })}>
+              {/* Simple visual cue for mobile users that menu is condensed or they can scroll */}
+          </button>
         </div>
       </nav>
 
