@@ -7,6 +7,22 @@ export const IconGraduation: React.FC<{ className?: string }> = ({ className }) 
   </svg>
 );
 
+export const IconOwl: React.FC<{ className?: string }> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    {/* Body */}
+    <path d="M12 22c4.97 0 9-3.134 9-7 0-3.866-4.03-7-9-7s-9 3.134-9 7c0 3.866 4.03 7 9 7z" />
+    {/* Eyes */}
+    <circle cx="9" cy="15" r="2" />
+    <circle cx="15" cy="15" r="2" />
+    {/* Ears/Head */}
+    <path d="M7 8l2 4" />
+    <path d="M17 8l-2 4" />
+    {/* Graduation Cap */}
+    <path d="M12 2l-8 4 8 4 8-4-8-4z" />
+    <path d="M20 6v5" />
+  </svg>
+);
+
 export const IconGlobe: React.FC<{ className?: string }> = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="10" />
