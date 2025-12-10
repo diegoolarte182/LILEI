@@ -39,13 +39,12 @@ function App() {
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-slate-950/80 backdrop-blur-xl shadow-lg border-b border-white/5 py-3' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
           <div className="flex items-center gap-4 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-             {/* Modern Text Logo */}
-            <div className="flex flex-col leading-none">
-              <span className={`text-2xl font-extrabold tracking-tighter ${isScrolled ? 'text-white' : 'text-white'}`}>
-                <span className="text-blue-500">UN</span><span className="text-orange-500">AD</span>
-              </span>
-              <span className="text-[0.6rem] font-bold text-slate-400 tracking-[0.3em] uppercase">Licenciatura</span>
-            </div>
+             {/* Logo Image - Using public URL to ensure visibility */}
+             <img 
+               src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_unad.png" 
+               alt="UNAD Universidad Nacional Abierta y a Distancia" 
+               className="h-12 w-auto bg-white rounded-lg p-1.5 shadow-md hover:scale-105 transition-transform duration-300" 
+             />
             
             <div className="h-8 w-px bg-white/10 mx-2"></div>
             

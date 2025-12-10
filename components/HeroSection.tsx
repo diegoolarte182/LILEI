@@ -30,12 +30,12 @@ const HeroButton: React.FC<HeroButtonProps> = ({ label, icon, targetId, delay })
       
       {/* Icon Background Decoration */}
       <div className="absolute -right-4 -top-4 text-white/5 group-hover:text-orange-500/10 transition-colors duration-500 transform rotate-12 scale-150">
-        {React.cloneElement(icon as React.ReactElement, { className: 'w-24 h-24' })}
+        {React.cloneElement(icon as React.ReactElement<{ className?: string }>, { className: 'w-24 h-24' })}
       </div>
 
       <div className="relative z-10">
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center border border-slate-600 group-hover:border-orange-500/50 group-hover:from-orange-500 group-hover:to-orange-600 transition-all duration-300 shadow-lg">
-          {React.cloneElement(icon as React.ReactElement, { className: 'w-6 h-6 text-slate-300 group-hover:text-white transition-colors' })}
+          {React.cloneElement(icon as React.ReactElement<{ className?: string }>, { className: 'w-6 h-6 text-slate-300 group-hover:text-white transition-colors' })}
         </div>
       </div>
 
@@ -49,6 +49,69 @@ const HeroButton: React.FC<HeroButtonProps> = ({ label, icon, targetId, delay })
     </button>
   );
 };
+
+// SVG Component for the LiLEI Logo - High Fidelity Recreation based on official reference
+const LileiLogoSVG = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 950 320" className={className} xmlns="http://www.w3.org/2000/svg" fill="none">
+    <style>
+      {`
+        .lilei-blue { fill: #005696; }
+        .lilei-yellow { fill: #FDB913; }
+        .lilei-orange { fill: #F05E23; }
+        .lilei-purple { fill: #582C58; }
+        .lilei-text-purple { fill: #582C58; font-family: Arial, sans-serif; font-weight: 800; }
+        .lilei-text-blue { fill: #005696; font-family: Arial, sans-serif; font-weight: 900; }
+      `}
+    </style>
+    
+    {/* --- ICON GROUP --- */}
+    <g transform="translate(30, 60)">
+       {/* Globe Base */}
+       <circle cx="100" cy="100" r="70" className="lilei-purple" />
+       
+       {/* Continents (Stylized White Shapes) */}
+       <path d="M80 70 C 100 70, 110 80, 120 95 C 110 100, 100 95, 95 90 C 90 95, 85 115, 90 130 C 105 135, 115 125, 130 115 C 125 130, 120 145, 115 155" fill="white" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+       <path d="M60 95 Q 70 95, 75 105 Q 70 115, 60 110 Z" fill="white" />
+       
+       {/* Blue Figure (Left) */}
+       <circle cx="50" cy="50" r="18" className="lilei-blue" />
+       <path d="M20 75 Q 15 65, 40 60 C 50 60, 60 70, 70 95 L 90 85 C 80 60, 60 45, 40 50 Z" className="lilei-blue" />
+       
+       {/* Yellow Figure (Top) */}
+       <circle cx="120" cy="25" r="18" className="lilei-yellow" />
+       <path d="M95 45 C 90 30, 110 30, 120 35 C 130 30, 150 30, 145 45 L 130 65 C 125 55, 115 55, 110 65 Z" className="lilei-yellow" />
+       
+       {/* Orange Figure (Bottom Left) */}
+       <circle cx="20" cy="120" r="18" className="lilei-orange" />
+       <path d="M30 100 C 45 95, 65 105, 75 120 L 55 140 C 45 130, 30 130, 20 135 C 10 130, 15 105, 30 100" className="lilei-orange" />
+    </g>
+
+    {/* --- TEXT GROUP --- */}
+    <g transform="translate(260, 40)">
+        {/* LiLEI Letters */}
+        {/* L (Blue) */}
+        <path d="M0 0 H55 V100 H110 V140 H0 V0 Z" className="lilei-blue" />
+        
+        {/* i (Blue) */}
+        <rect x="130" y="0" width="45" height="45" className="lilei-blue" />
+        <rect x="130" y="55" width="45" height="85" className="lilei-blue" />
+        
+        {/* L (Yellow) */}
+        <path d="M195 0 H250 V100 H305 V140 H195 V0 Z" className="lilei-yellow" />
+        
+        {/* E (Yellow) */}
+        <path d="M325 0 H430 V35 H380 V50 H420 V85 H380 V100 H430 V140 H325 V0 Z" className="lilei-yellow" />
+        
+        {/* I (Yellow) */}
+        <rect x="450" y="0" width="55" height="140" className="lilei-yellow" />
+        
+        {/* Subtitles */}
+        <text x="252" y="185" fontSize="24" textAnchor="middle" className="lilei-text-purple">LICENCIATURA EN LENGUAS EXTRANJERAS</text>
+        <text x="252" y="220" fontSize="24" textAnchor="middle" className="lilei-text-purple">CON ÉNFASIS EN INGLÉS</text>
+        <text x="252" y="270" fontSize="36" textAnchor="middle" className="lilei-text-blue">ECEDU</text>
+    </g>
+  </svg>
+);
 
 // Component for the animated owl background pattern
 const OwlBackground = () => {
@@ -89,12 +152,15 @@ export const HeroSection: React.FC = () => {
         <div className="text-center mb-20 max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm mb-8 animate-fade-in-up">
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-            <span className="text-slate-300 text-xs font-bold tracking-[0.2em] uppercase">Programa Acreditado UNAD</span>
+            <span className="text-slate-300 text-xs font-bold tracking-[0.2em] uppercase">Programa con registro calificado MEN</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent drop-shadow-sm">LILEI</span>
-          </h1>
+          <div className="flex justify-center mb-10">
+             {/* White container for the logo, exactly as requested */}
+             <div className="bg-white rounded-3xl px-8 py-6 shadow-[0_0_50px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-500 animate-fade-in-up">
+                <LileiLogoSVG className="h-32 md:h-44 w-auto drop-shadow-sm" />
+             </div>
+          </div>
           
           <h2 className="text-2xl md:text-4xl font-light text-slate-300 mb-8 inline-block max-w-4xl mx-auto leading-snug">
             Licenciatura en Lenguas Extranjeras con <br className="hidden md:block" />
