@@ -33,14 +33,24 @@ export const ProcessesSection: React.FC = () => {
                     La homologación de los cursos de Inglés del programa se realiza exclusivamente mediante certificación de nivel de lengua obtenida en un examen estandarizado reconocido internacionalmente.
                 </p>
                 <div className="flex justify-center gap-6 flex-wrap">
-                    <button className="inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-3 rounded-xl font-medium hover:bg-slate-800 transition-all shadow-lg shadow-slate-900/10">
+                    <a 
+                        href="https://drive.google.com/file/d/1RugUqgvDu618l7X9gCQNN7WKDDICHfkQ/view?usp=drive_link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-3 rounded-xl font-medium hover:bg-slate-800 transition-all shadow-lg shadow-slate-900/10"
+                    >
                         <IconDownload className="w-4 h-4 text-slate-400" />
-                        <span>Descargar Acuerdo 421 de 2025</span>
-                    </button>
-                     <button className="inline-flex items-center gap-3 bg-white text-slate-700 border border-slate-200 px-8 py-3 rounded-xl font-medium hover:bg-slate-50 hover:border-slate-300 hover:text-blue-700 transition-all shadow-sm">
+                        <span>Descargar Acuerdo Homologación</span>
+                    </a>
+                     <a 
+                        href="https://docs.google.com/document/d/1rGd5b0RQmeWcGLLby4fI53VzS7mL5wbV/edit?usp=sharing&ouid=111043385336170724555&rtpof=true&sd=true" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 bg-white text-slate-700 border border-slate-200 px-8 py-3 rounded-xl font-medium hover:bg-slate-50 hover:border-slate-300 hover:text-blue-700 transition-all shadow-sm"
+                    >
                         <IconFileText className="w-4 h-4" />
                         <span>Ver Guía Solicitud</span>
-                    </button>
+                    </a>
                 </div>
             </div>
             

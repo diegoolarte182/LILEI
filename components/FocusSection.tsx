@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconGlobe, IconLaptop, IconCheckCircle, IconArrowRight, IconLink, IconHome } from './Icons';
+import { IconGlobe, IconLaptop, IconCheckCircle, IconArrowRight, IconLink, IconHome, IconDownload } from './Icons';
 
 const BackToHome = () => (
     <button 
@@ -37,15 +37,40 @@ export const FocusSection: React.FC = () => {
                     </p>
                 </div>
                 
-                <div className="mt-12">
+                {/* Visual Credits Breakdown */}
+                <div className="grid grid-cols-3 gap-3 md:gap-4 my-8">
+                  <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center hover:border-blue-300 transition-colors">
+                    <div className="text-3xl font-bold text-blue-700">133</div>
+                    <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider mt-1">Obligatorios</div>
+                  </div>
+                   <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center hover:border-orange-300 transition-colors">
+                    <div className="text-3xl font-bold text-orange-500">27</div>
+                    <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider mt-1">Electivos</div>
+                  </div>
+                   <div className="bg-slate-900 p-4 rounded-xl border border-slate-800 shadow-lg text-center">
+                    <div className="text-3xl font-bold text-white">160</div>
+                    <div className="text-[10px] uppercase font-bold text-slate-500 tracking-wider mt-1">Total Créditos</div>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-4 mt-8">
+                    <a 
+                        href="https://estudios.unad.edu.co/images/2025/mallas-pdf/Plan-de-estudios-Licenciatura-en-Lenguas-Extranjeras-con-enfasis-en-Ingles-nueva.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg shadow-orange-500/20 hover:-translate-y-1 text-sm"
+                    >
+                        <IconDownload className="w-4 h-4" />
+                        <span>Descargar Plan de Estudios (PDF)</span>
+                    </a>
                     <a 
                         href="https://estudios.unad.edu.co/licenciatura-en-lenguas-extranjeras-con-enfasis-en-ingles" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-4 bg-slate-900 hover:bg-blue-900 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-xl shadow-slate-900/20 hover:-translate-y-1"
+                        className="inline-flex items-center gap-3 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-6 py-3 rounded-xl font-bold transition-all hover:-translate-y-1 text-sm"
                     >
-                        <span>Visitar Sitio Web Oficial</span>
-                        <IconLink className="w-4 h-4 text-orange-400" />
+                        <span>Sitio Web Oficial</span>
+                        <IconLink className="w-4 h-4" />
                     </a>
                 </div>
                 <BackToHome />

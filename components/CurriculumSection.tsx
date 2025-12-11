@@ -102,18 +102,62 @@ export const CurriculumSection: React.FC = () => {
                         <span>Ver Micrositio de Práctica</span>
                         <IconArrowRight className="w-4 h-4" />
                     </a>
+                </div>
+           </div>
+
+           {/* SEMINARIO PRE-PRACTICA SECTION */}
+           <div className="mt-16 max-w-5xl mx-auto">
+              <div className="bg-orange-50 rounded-[2rem] p-8 md:p-12 border border-orange-100 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white/40 rounded-full -mr-16 -mt-16 pointer-events-none"></div>
+                
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3 relative z-10">
+                   <span className="w-1.5 h-8 bg-orange-500 rounded-full block"></span>
+                   Seminario Pre Práctica
+                </h3>
+                
+                <p className="text-slate-700 text-lg leading-relaxed mb-8 font-light relative z-10">
+                   El Seminario Pre Práctica como estrategia de la Escuela de Ciencias de la Educación, se desarrolla en el periodo previo al inicio de la ruta de práctica pedagógica y propicia reflexión sobre el ejercicio de la práctica y el alistamiento administrativo para que los estudiantes cuenten con las condiciones óptimas y necesarias para el inicio de su práctica pedagógica en el período académico respectivo.
+                </p>
+
+                <div className="space-y-4 mb-8 relative z-10">
+                   <details className="group bg-white rounded-xl border border-orange-200 open:shadow-md transition-all duration-300">
+                      <summary className="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-slate-800 hover:text-orange-600 transition-colors">
+                         ¿Cuándo se inscribe el Seminario?
+                         <span className="text-orange-400 transform group-open:rotate-180 transition-transform duration-300">▼</span>
+                      </summary>
+                      <div className="px-6 pb-6 pt-0 text-slate-600 leading-relaxed border-t border-transparent group-open:border-slate-100 mt-2">
+                         <p className="mb-4">Una vez el estudiante de licenciatura verifica el cumplimiento de prerrequisitos para el inicio de su Práctica Educativa y Pedagógica – PEP puede inscribir el Seminario Pre Práctica un periodo previo al inicio del o los primeros cursos de la ruta formativa de PEP.</p>
+                         <p>El seminario pre práctica se debe inscribir cada periodo académico a partir del inicio de la ruta de práctica educativa y pedagógica.</p>
+                      </div>
+                   </details>
+
+                   <details className="group bg-white rounded-xl border border-orange-200 open:shadow-md transition-all duration-300">
+                      <summary className="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-slate-800 hover:text-orange-600 transition-colors">
+                         ¿Cómo se realiza la inscripción al Seminario Pre Práctica?
+                         <span className="text-orange-400 transform group-open:rotate-180 transition-transform duration-300">▼</span>
+                      </summary>
+                      <div className="px-6 pb-6 pt-0 text-slate-600 leading-relaxed border-t border-transparent group-open:border-slate-100 mt-2">
+                         <p className="mb-4">El Seminario Pre práctica no es un curso ofertado en el proceso de matrícula, por lo cual, el estudiante debe estar pendiente de la convocatoria de éste a través de los correos internos del campus y de los foros colaborativos en los cursos.</p>
+                         <p>El Seminario Pre Práctica abre inscripciones dos (2) veces en el año, en el mes de marzo a julio y de septiembre a diciembre. La inscripción se realiza diligenciando el formulario que el Equipo Nacional de Prácticas comparte a través de este espacio.</p>
+                      </div>
+                   </details>
+                </div>
+
+                <div className="relative z-10">
                     <a 
-                        href="https://www.youtube.com/watch?v=ts1o2dhbBDk"
+                        href="https://youtu.be/zqJvolv-uNE"
                         target="_blank"
-                        rel="noopener noreferrer" 
-                        className="inline-flex items-center gap-3 bg-slate-100 text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-white hover:border-slate-300 transition-all"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 bg-white hover:bg-slate-50 text-red-600 border border-red-100 hover:border-red-200 px-6 py-3 rounded-xl font-bold transition-all shadow-sm hover:shadow-md"
                     >
-                        <span>Ver Video Explicativo</span>
+                        <span>Ver Video: ¿Qué es el Seminario?</span>
                         <IconLink className="w-4 h-4" />
                     </a>
                 </div>
+              </div>
            </div>
-           <div className="flex justify-center">
+
+           <div className="flex justify-center mt-12">
                <BackToHome />
            </div>
         </div>
