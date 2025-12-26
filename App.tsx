@@ -3,6 +3,7 @@ import { HeroSection } from './components/HeroSection';
 import { FocusSection } from './components/FocusSection';
 import { CurriculumSection } from './components/CurriculumSection';
 import { ProcessesSection } from './components/ProcessesSection';
+import { AcademicProcessesSection } from './components/AcademicProcessesSection';
 import { IconMail } from './components/Icons';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       { label: 'Programa', id: 'general-info' },
       { label: 'Enfoque', id: 'pedagogical-focus' },
       { label: 'Práctica', id: 'practice' },
+      { label: 'Procesos', id: 'academic-processes' },
       { label: 'Homologación', id: 'homologation' },
       { label: 'Matrícula', id: 'registration' },
       { label: 'Transición', id: 'transition' },
@@ -39,7 +41,7 @@ function App() {
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-slate-950/80 backdrop-blur-xl shadow-lg border-b border-white/5 py-3' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
           <div className="flex items-center gap-4 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-             {/* Logo Image - Using public URL to ensure visibility */}
+             {/* Logo Image */}
              <img 
                src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_unad.png" 
                alt="UNAD Universidad Nacional Abierta y a Distancia" 
@@ -102,12 +104,12 @@ function App() {
         <HeroSection />
         <FocusSection />
         <CurriculumSection />
+        <AcademicProcessesSection />
         <ProcessesSection />
       </main>
 
       {/* Footer */}
       <footer className="bg-slate-950 text-slate-400 py-20 px-4 border-t border-slate-900 relative overflow-hidden">
-        {/* Abstract background shape for footer */}
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-900/10 rounded-full blur-3xl"></div>
 
         <div className="max-w-7xl mx-auto relative z-10">

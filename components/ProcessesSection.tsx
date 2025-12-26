@@ -150,7 +150,7 @@ export const ProcessesSection: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                <div className="pt-6">
+                <div className="pt-6 flex flex-col sm:flex-row gap-6">
                     <a 
                         href="https://estudios.unad.edu.co/opcion-de-grado-profesional"
                         target="_blank"
@@ -159,6 +159,15 @@ export const ProcessesSection: React.FC = () => {
                     >
                         <span className="border-b-2 border-blue-200 group-hover:border-blue-900 transition-colors">Ver Información Oficial</span>
                         <IconLink className="w-5 h-5" />
+                    </a>
+                    <a 
+                        href="https://drive.google.com/file/d/1mBzFDFBmtLOG3G6FJDmrmCxuTa-pBypk/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-orange-600 font-bold hover:text-orange-800 inline-flex items-center gap-3 text-lg group"
+                    >
+                        <span className="border-b-2 border-orange-200 group-hover:border-orange-800 transition-colors">Descargar Paso a Paso (PDF)</span>
+                        <IconDownload className="w-5 h-5" />
                     </a>
                 </div>
                 <BackToHome />

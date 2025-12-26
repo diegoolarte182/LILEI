@@ -167,8 +167,8 @@ export const HeroSection: React.FC = () => {
             <span className="font-semibold text-orange-400">Énfasis en Inglés</span>
           </h2>
           
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed font-light border-t border-slate-800 pt-8 mt-4">
-             Formación docente de vanguardia con visión internacional, enfoque crítico y herramientas tecnológicas modernas.
+          <p className="text-slate-400 max-w-4xl mx-auto text-lg leading-relaxed font-light border-t border-slate-800 pt-8 mt-4">
+             Formación docente de vanguardia, con proyección internacional, enfoque crítico y compromiso con el desarrollo territorial, fortalecida mediante mediaciones pedagógicas y tecnológicas propias de la educación abierta y a distancia.
           </p>
         </div>
 
